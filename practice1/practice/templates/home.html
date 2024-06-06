@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% block content %}
+<h1>HEllO {{name}}?</h1>
+<form action="add" method="post">
+    {% csrf_token %}
+    enter no<input name="num1" type="text"><br>
+    enter no<input name="num2" type="text"><br>
+    <input type="submit">
+
+</form>
+{% endblock %}
+</body>
+</html>
